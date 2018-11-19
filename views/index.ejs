@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:200|Nanum+Gothic|PT+Sans+Narrow" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+ <h2>WHATS YOU FAVORITE GAME CONSOLE OF ALL TIME?</h2>
+<section class= "form">
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <br>
+    <br>
+    <input type="text" placeholder="game" name="quote">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section class= "quotes">
+    <ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="quote">
+      <span><%= quotes[i].name %></span>
+      <span><%= quotes[i].quote %></span>
+      <span><i class="fas fa-edit"></i></span>
+      <span><i class="fas fa-trash"></i></span>
+    </li>
+  <% } %>
+  </ul>
+  <section id="modal"></section>
+
+  <script src="main.js"></script>
+
+  </body>
+
+</html>
